@@ -1,14 +1,25 @@
 #include "header.h"
-#include "Binary_Tree.h"
+#include "Trees.h"
 
 int main() {
-  Binary_Tree b1(1);
-  Node * temp;
-  temp = insertLeft(b1.root, 3);
-  insertLeft(temp, 2);
-  insertRight(temp, 0);
-  temp = insertRight(b1.root, 5);
-  insertRight(temp, 9);
-  insertLeft(temp, 21);
-  b1.printTree();
+  BST bst1(4);
+  bst1.insertNode(2);
+  bst1.insertNode(1);
+  bst1.insertNode(3);
+  bst1.insertNode(6);
+  bst1.insertNode(5);
+  bst1.insertNode(7);
+  bst1.printTree();
+  bst1.deleteNode(3);
+  bst1.printTree();
+  bst1.insertNode(3);
+  bst1.deleteNode(2);
+  bst1.printTree();
+  bst1.deleteNode(1);
+  bst1.deleteNode(3);
+  bst1.insertNode(2);
+  bst1.insertNode(1);
+  bst1.insertNode(3);
+  bst1.deleteNode(4);
+  bst1.printTree();
 }
